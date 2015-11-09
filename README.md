@@ -32,4 +32,5 @@ Look this forum topic http://forum.fonline2.com/index.php?topic=6542.0
 Credits:
 
 Development by me and https://github.com/logicdaemon
+
 Graphical design concept by Niko Parviainen
