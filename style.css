@@ -1,0 +1,358 @@
+body{background-color: #000000;background-repeat: no-repeat;background-position: center;font-family: Verdana, Geneva, sans-serif;font-size: 12px;color: #ededed;}
+
+}
+@font-face{
+	font-family: "Gothic821";
+	src: url(./apps/fcp/font/fallout.eot);
+}
+@font-face{
+	font-family: "Gothic821";
+	src: url(./apps/fcp/font/fallout.ttf) format('truetype');
+}
+@font-face{
+	font-family: "JHFO";
+	src: url(./apps/fcp/font/JH_FALLOUT3.eot);
+}
+@font-face{
+	font-family: "JHFO";
+	src: url(./apps/fcp/font/JH_FALLOUT3.ttf) format('truetype');
+}
+
+.container a,a:visited{color: #00cc00;}
+.container body{background-color: #000000;background-image: none;}
+.container table,.container td{margin: 0px;padding: 0px;border: 0px;border-spacing: 5px;}
+
+/*.container input{width: 200px;}
+.container input[type="text"],.container input[type="password"],.container textarea{border: 1px solid #00cc00;padding: 5px;margin-bottom: 5px;background-color: #63cb65;box-shadow: inset 0 0 50px rgba(0,0,0,1);color: #ededed;width:380px;}
+*/
+.container textarea{height: 100px;font-family: JHFO;font-size: 8px;}
+.container select{border: 1px solid #00cc00;padding: 3px;background-color: #3b7a3c;box-shadow: inset 0 0 50px rgba(0,0,0,1);color: #ededed;font-family: JHFO;font-size: 8px;}
+.container input[type="text"]:disabled,textarea:disabled,option:disabled{color:#006600;}
+.container input[type="submit"],.container input[type="button"]{width: auto;display: inline-block; border: 1px solid #00cc00;color: #00cc00;font-weight: bold;padding: 3px;padding-left: 10px;padding-right: 10px;text-decoration: none;background-color: #003300;border-radius: 2px 2px 2px 2px;margin: 8px;margin-left: 0px;margin-top: 3px;-webkit-transition: 0.3s background;-moz-transition: 0.3s background;cursor:pointer;}
+.container input:disabled,.container textarea:disabled,.container select:disabled{color: #999999;}
+.container input[type="submit"]:hover,.container input[type="button"]:hover{background-color: #006600;}
+
+.container{
+	width: 1000px;
+	height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	position: relative;
+	cursor: default;
+	font-family: JHFO,Fixedsys,Consolas;
+	font-size: 8px;
+	color: #00cc00;
+	
+	border: 1px solid #666666;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 10px #666666;
+}
+.container div{
+	position: absolute;
+}
+.container div div{
+	position: relative;
+}
+
+#containerCreation{background-image: url(./apps/fcp/gfx/bg.gif);}
+#containerSelection{background-image: url(./apps/fcp/gfx/bg_selection.gif);}
+#containerVersionSelection{border: 1px solid #00cc00;border-radius: 0px 0px 10px 10px;padding: 10px;background-color: #003300;width: 600px;height: auto;}
+
+.versionList{
+	width: 600px;margin-left: auto;margin-right: auto;
+	font-family: JHFO,Fixedsys,Consolas;
+	font-size: 8px;
+	color: #00cc00;
+}
+.selectTitle{clear: left;font-family: Gothic821;font-size: 50px;margin-left: 10px;margin-bottom: 0px;margin-top:0px;padding:0px;height:90px;text-shadow: 0 0 2px #000000;}
+
+/* ALL KINDS OF BUTTONS */
+.button{
+	background-image: url(./apps/fcp/gfx/button_up.png);
+	font-family: Gothic821,Fixedsys,Consolas;
+	font-size: 20px;
+	color: #d8b038;
+	width: 86px;
+	height: 29px;
+	cursor: pointer;
+	padding-left: 35px;
+	padding-top: 3px;
+	text-transform: uppercase;
+}
+.button:active{background-image: url(./apps/fcp/gfx/button_down.png);}
+.buttonDead{
+	background-image: url(./apps/fcp/gfx/button_up.png);
+	font-family: Gothic821,Fixedsys,Consolas;
+	font-size: 20px;
+	width: 80px;
+	color: #241010;
+	width: 86px;
+	height: 29px;
+	cursor: default;
+	padding-left: 35px;
+	padding-top: 3px;
+	text-transform: uppercase;
+}
+.toggle{
+	background-image: url(./apps/fcp/gfx/toggle_up.gif);
+	width: 17px;
+	height: 11px;
+	cursor: pointer;
+}
+.toggle:active{background-image: url(./apps/fcp/gfx/toggle_down.gif);}
+.plus{
+	background-image: url(./apps/fcp/gfx/plus_up.gif);
+	width: 16px;
+	height: 12px;
+	cursor: pointer;
+}
+.plus:active{background-image: url(./apps/fcp/gfx/plus_down.gif);}
+.minus{
+	background-image: url(./apps/fcp/gfx/minus_up.gif);
+	width: 16px;
+	height: 12px;
+	cursor: pointer;
+}
+.minus:active{background-image: url(./apps/fcp/gfx/minus_down.gif);}
+.buttonVersion{
+	display: inline-block;
+	cursor: pointer;
+	padding: 20px;
+	margin: 10px;
+	margin-top: 20px;
+	border: 1px solid #00cc00;
+	background-color: #000000;
+	font-size: 24px;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: inset 0 0 50px #003300;
+}
+.buttonVersion:hover{
+	border: 1px solid #cccc00;
+	background-color: #000000;
+	box-shadow: inset 0 0 50px #cc9900;
+	color: #cccc00;
+}
+.arrow_up{background-image: url(./apps/fcp/gfx/INVUPOUT.gif);width:22px;height:23px;cursor: pointer;}
+.arrow_up:active{background-image: url(./apps/fcp/gfx/INVUPIN.gif);}
+.arrow_down{background-image: url(./apps/fcp/gfx/INVDNOUT.gif);width:22px;height:23px;cursor: pointer;}
+.arrow_down:active{background-image: url(./apps/fcp/gfx/INVDNIN.gif);}
+.arrow_tiny_up{background-image: url(./apps/fcp/gfx/UPARWOFF.gif);width:11px;height:14px;cursor: pointer;}
+.arrow_tiny_up:active{background-image: url(./apps/fcp/gfx/UPARWON.gif);}
+.arrow_tiny_down{background-image: url(./apps/fcp/gfx/DNARWOFF.gif);width:11px;height:14px;cursor: pointer;}
+.arrow_tiny_down:active{background-image: url(./apps/fcp/gfx/DNARWON.gif);}
+
+/* OUTPUT */
+.outputNormal{
+	font-family: JHFO,Fixedsys,Consolas;
+	font-size: 8px;
+	color: #00cc00;
+}
+.outputNormal div span:last-child{
+	position: absolute;
+	right: 0px;
+}
+.outputNormal div span:first-child{ /* TO FIX DIVS WITH ONLY ONE SPAN */
+	position: relative;
+}
+
+.outputBig{
+	font-family: Gothic821;
+	font-size: 26px;
+	color: #ffffff;
+}
+
+/* SELECTIONS */
+.selectPerm{color: #cccccc;}
+.selectTemp{color: #d8b038;}
+.selectDis{color: #cc0000;}
+.selectOk{color: #00cc00;}
+
+.selectItem, .selectItemDisabled, .selectItemDisabled2, .selectedItem{text-align: center;float: left;width: 70px;height: 90px;text-shadow: 0 0 20px #000000;cursor: pointer;}
+.selectItemDisabled{color: #cc0000;cursor: default;}
+.selectItemDisabled2{color: #cccccc;cursor: default;}
+.selectedItem{color: #cccc00;}
+.selectItem img{height: 48px;width: 48px;-webkit-box-shadow: 0 0 50px #000000;border: 1px solid #00cc00;border-radius: 3px 3px 3px 3px;}
+.selectItemDisabled img{height: 48px;width: 48px;-webkit-box-shadow: 0 0 50px #000000;border: 1px solid #cc0000;border-radius: 3px 3px 3px 3px;opacity: 0.5;}
+.selectItemDisabled2 img{height: 48px;width: 48px;-webkit-box-shadow: 0 0 10px #cccccc;border: 1px solid #cccccc;border-radius: 3px 3px 3px 3px;}
+.selectedItem img{height: 48px;width: 48px;-webkit-box-shadow: 0 0 10px #cccc00;border: 1px solid #cccc00;border-radius: 3px 3px 3px 3px;}
+.selectItem:hover img{-webkit-box-shadow: 0 0 10px #00cc00;}
+
+/* BUTTON LOCATIONS */
+#buttonBooks{right: 5px;top: 100px;}
+#buttonDrugs{right: 5px;top: 135px;}
+#buttonQuests{right: 5px;top: 170px;}
+#buttonCTH{right: 5px;top: 205px;}
+#buttonDeleteLink{right: 5px;top: 240px;}
+#buttonReset{right: 5px;bottom: 170px;}
+#buttonRestore{right: 5px;bottom: 135px;}
+#buttonDirectLink{right: 5px;bottom: 80px;}
+#buttonSave{right: 5px;bottom: 45px;}
+#buttonDone{right: 5px;bottom: 10px;}
+
+#buttonReady{bottom: 10px;right:35px;}
+#buttonCancel{bottom: 45px;right:35px;}
+#buttonCancel2{bottom: 80px;right:35px;}
+
+#buttonTabBuild{left:30px;top:328px;}
+#buttonTabCombat{left:130px;top:328px;}
+#buttonTabInfo{left:228px;top:328px;}
+.buttonTab{width: 85px;height: 27px;cursor: pointer;font-family: Gothic821,Fixedsys,Consolas;font-size: 20px;text-transform: uppercase;text-align:center;color: #d8b038;padding-top:3px;}
+.titleTab{text-align: center;width: auto;}
+
+/* ARROW LOCATIONS */
+#buttonUp{left:610px;top:220px;}
+#buttonDown{left:610px;top:245px;}
+#arrowTabUp{left:316px;top:369px;}
+#arrowTabDown{left:316px;top:384px;}
+
+/* TOGGLE LOCATIONS */
+#toggleSkills{left: 346px;top:55px;}
+#toggleTraits1{left: 23px;bottom:24px;}
+#toggleTraits2{left: 299px;bottom:24px;}
+#toggleTraits1 div{margin-bottom: 2px;}
+#toggleTraits2 div{margin-bottom: 2px;}
+#toggleQuests{top: 392px;left: 558px;}
+#toggleGlowQuests{top: 403px;left: 558px;}
+#toggleImplants {top: 340px;left: 860px;}
+.smallToggle {height: 9px; margin-top: 1px}
+
+/* PLUS/MINUS LOCATIONS */
+#plusminusSpecial{top: 38px;left: 149px;}
+#plusminusSpecial div{margin-bottom: 9px;}
+#plusminusSpecial div div{margin-bottom: 0px;}
+#plusminusSlider{top: 45px;left:515px;background-image: url(./apps/fcp/gfx/slider.gif);width: 43px;height: 29px;z-index: 2;}
+#plusminusSlider div{position: absolute;right: 5px;bottom: 14px;}
+#plusminusSlider div:last-child{position: absolute;right: 5px;bottom: 2px;}
+#plusminusSliderA{top: 55px;left:693px;background-image: url(./apps/fcp/gfx/slider.gif);width: 43px;height: 29px;z-index: 2;}
+#plusminusSliderA div{position: absolute;right: 5px;bottom: 14px;}
+#plusminusSliderA div:last-child{position: absolute;right: 5px;bottom: 2px;}
+#plusminusSliderB{top: 55px;left:840px;background-image: url(./apps/fcp/gfx/slider.gif);width: 43px;height: 29px;z-index: 2;}
+#plusminusSliderB div{position: absolute;right: 5px;bottom: 14px;}
+#plusminusSliderB div:last-child{position: absolute;right: 5px;bottom: 2px;}
+
+/* OUTPUT LOCATIONS */
+#outputSkills{top: 55px;left: 371px;line-height: 11px;width: 155px;}
+#outputPerks1{top: 55px;left: 578px;line-height: 11px;width: 134px;}
+#outputPerks2{top: 55px;right: 141px;line-height: 11px;width: 134px;}
+#outputTraits1{bottom: 26px;left: 48px;line-height: 13px;}
+#outputTraits2{bottom: 26px;left: 180px;line-height: 13px;}
+#outputStats1{top: 40px;left: 193px;line-height: 11px;width: 120px;}
+#outputStats2{top: 175px;left: 193px;line-height: 11px;width: 120px;}
+#outputSpecialNum{top: 33px;left: 63px;line-height: 33px;}
+#outputSpecialText{top: 33px;left:102px;line-height: 33px;}
+#outputTagpoints{}
+#outputSkillpoints{}
+#outputCharpoints{}
+#outputInfo{left: 30px;top: 280px; width: 122px;}
+#outputTabBuild{left: 30px;top: 365px;width: 280px;height: 100px;overflow:hidden;}
+#outputTabCombat{left: 30px;top: 365px;display: none;width: 280px;height: 100px;overflow:hidden;}
+#outputTabInfo{left: 30px;top: 365px;display: none;width: 280px;height: 100px;overflow:hidden;}
+#outputMiddleDown{top: 277px;left: 341px;line-height: 11px;width: 180px;}
+
+
+#selectItems{width: 560px;height: 440px;top: 20px;left: 20px;overflow: hidden;}
+#filter{width: 560px;top: 20px;left: 20px;}
+#selectItems2{width: 560px;height: 270px;top: 190px;left: 20px;overflow: hidden;}
+
+.textbox{background-color: rgba(0,0,0,0.5);box-shadow: 0 0 20px #000000;margin-left: 20px;margin-right: 20px;margin-top:-30px;}
+#clientInfobox{
+	border: 2px solid #436543;
+	background-color: rgba(83,142,80,0.8);
+}
+
+.drugged-high{
+	color: #1092BC;
+}
+.drugged-equal{
+	color: #cccc00;
+}
+.drugged-low{
+	color: #cc0000;
+}
+
+#plannedLevel {font-family: JHFO;font-size: 8px; color: #00cc00; padding: 0; background-color: #000000; border: 4px; float: right; margin: 0; width: 15px; text-align: right}
+#outputSkills div{height: 11px;}
+
+/* Titles */
+#titles {
+	text-align: center;
+	line-height: 11px;
+	height: 0;
+}
+#level3 {top: 55px;
+left: 578px;
+width: 134px;}
+#level6 {top: 186px;
+left: 578px;
+width: 134px;}
+#level9 {top: 298px;
+left: 578px;
+width: 134px;}
+#level12 {top: 22px;
+left: 720px;
+width: 134px;}
+#level15 {top: 196px;
+left: 720px;
+width: 134px;}
+#level18 {top: 240px;
+left: 720px;
+width: 134px;}
+#booksTitle {top:18px;left: 193px;width: 120px;}
+#questTitle {top: 304px;left: 578px;width: 134px;}
+#implantsTitle {top:241px;left: 720px;width: 134px;}
+#takenPerksTitle {top: 166px;left: 341px;width: 196px;}
+
+#books {top: 95px;left: 193px;width: 120px;}
+#quests {top:393px;left: 578px;width: 134px;}
+#implants {
+top: 340px;
+left: 725px;
+width: 134px;}
+
+.N_A { color: grey; }
+.maxSkill { color: grey; }
+.excessSkill { color: yellow; }
+.unavailablePerk { color: red; }
+.badSpecial { color: red; }
+
+#copyright {
+font-size: 9px;
+text-align: center;
+color: #333333;
+margin-top: 10px;
+}
+
+.description {
+	font-family: Verdana, Geneva, sans-serif;font-size: 12px;color: #ededed;
+	position: absolute;
+	top: 0px;
+	width: 200px;
+	left: 0px;
+	border: 2px solid #435665;
+	background-color: rgba(102,148,183,0.8);
+	box-shadow: inset 0 0 50px rgba(0,0,0,1);
+	border-radius: 0px 4px 4px 4px;
+	padding: 5px;
+	z-index: 998;
+	display: none;
+}
+
+#name {
+	top: 3px;
+	left: 325px;
+	/*opacity: 1;*/
+}
+
+#name_input {
+	font-family: Gothic821,Fixedsys,Consolas;
+	font-size: 20px;
+	color: #d8b038;
+	width: 280px;
+	height: 22px;
+	padding: 0px;
+	border: 0px;
+	cursor: pointer;
+	text-align: center;
+	background-color : transparent;
+}

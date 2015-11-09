@@ -1,0 +1,262 @@
+<html><head>
+<title>Fonline 2 Character Planner</title>
+<script src="inc/jquery-2.1.1.js"></script>
+<script src="fcp.js"></script>
+<link href="style.css" type="text/css" rel="stylesheet">
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53201865-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<div id="clientContent" style="display: block;"><div class="container" id="containerCreation">
+<!-- BUTTONS -->
+<div id="buttonBooks" class="button">Books</div>
+<div id="buttonDrugs" class="buttonDead"></div>
+<div id="buttonQuests" class="buttonDead"></div>
+<div id="buttonCTH" class="buttonDead"></div>
+<div id="buttonDeleteLink" class="button">Del link</div>
+<div id="buttonReset" class="button">Reset</div>
+<div id="buttonRestore" class="button">Restore</div>
+<div id="buttonDirectLink" class="button">Link it!</div>
+<div id="buttonSave" class="button">Save</div>
+<div id="buttonDone" class="buttonDead">Check</div>
+
+<!-- TOGGLES -->
+<div id="toggleSkills">
+	<div id="toggleSkill_1" class="toggle"></div>
+	<div id="toggleSkill_2" class="toggle"></div>
+	<div id="toggleSkill_3" class="toggle"></div>
+	<div id="toggleSkill_4" class="toggle"></div>
+	<div id="toggleSkill_5" class="toggle"></div>
+	<div id="toggleSkill_6" class="toggle"></div>
+	<div id="toggleSkill_7" class="toggle"></div>
+	<div id="toggleSkill_8" class="toggle"></div>
+	<div id="toggleSkill_9" class="toggle"></div>
+	<div id="toggleSkill_10" class="toggle"></div>
+	<div id="toggleSkill_11" class="toggle"></div>
+	<div id="toggleSkill_12" class="toggle"></div>
+	<div id="toggleSkill_13" class="toggle"></div>
+	<div id="toggleSkill_14" class="toggle"></div>
+	<div id="toggleSkill_15" class="toggle"></div>
+	<div id="toggleSkill_16" class="toggle"></div>
+	<div id="toggleSkill_17" class="toggle"></div>
+	<div id="toggleSkill_18" class="toggle"></div>
+</div>
+<div id="toggleTraits1">
+	<div id="toggleTrait_1" class="toggle"></div>
+	<div id="toggleTrait_2" class="toggle"></div>
+	<div id="toggleTrait_3" class="toggle"></div>
+	<div id="toggleTrait_4" class="toggle"></div>
+	<div id="toggleTrait_5" class="toggle"></div>
+	<div id="toggleTrait_6" class="toggle"></div>
+	<div id="toggleTrait_7" class="toggle"></div>
+	<div id="toggleTrait_8" class="toggle"></div>
+</div>
+<div id="toggleTraits2">
+	<div id="toggleTrait_9" class="toggle"></div>
+	<div id="toggleTrait_10" class="toggle"></div>
+	<div id="toggleTrait_11" class="toggle"></div>
+	<div id="toggleTrait_12" class="toggle"></div>
+	<div id="toggleTrait_13" class="toggle"></div>
+	<div id="toggleTrait_14" class="toggle"></div>
+	<div id="toggleTrait_15" class="toggle"></div>
+	<div id="toggleTrait_16" class="toggle"></div>
+</div>
+<div id="toggleQuests">
+	<div id="toggleQuest_1" class="toggle"></div>
+</div>
+<div id="toggleGlowQuests">
+	<div id="toggleGlowChoice_1" class="toggle"></div>
+	<div id="toggleGlowChoice_2" class="toggle"></div>
+	<div id="toggleGlowChoice_3" class="toggle"></div>
+</div>
+<div id="toggleImplants">
+</div>
+
+<!-- PLUS/MINUS -->
+<div id="plusminusSpecial">
+	<div id="plusminusSpecial_1">
+		<div id="plusSpecial_1" class="plus"></div>
+		<div id="minusSpecial_1" class="minus"></div>
+	</div>
+	<div id="plusminusSpecial_2">
+		<div id="plusSpecial_2" class="plus"></div>
+		<div id="minusSpecial_2" class="minus"></div>
+	</div>
+	<div id="plusminusSpecial_3">
+		<div id="plusSpecial_3" class="plus"></div>
+		<div id="minusSpecial_3" class="minus"></div>
+	</div>
+	<div id="plusminusSpecial_4">
+		<div id="plusSpecial_4" class="plus"></div>
+		<div id="minusSpecial_4" class="minus"></div>
+	</div>
+	<div id="plusminusSpecial_5">
+		<div id="plusSpecial_5" class="plus"></div>
+		<div id="minusSpecial_5" class="minus"></div>
+	</div>
+	<div id="plusminusSpecial_6">
+		<div id="plusSpecial_6" class="plus"></div>
+		<div id="minusSpecial_6" class="minus"></div>
+	</div>
+	<div id="plusminusSpecial_7">
+		<div id="plusSpecial_7" class="plus"></div>
+		<div id="minusSpecial_7" class="minus"></div>
+	</div>
+</div>
+
+<!-- OUTPUTS -->
+<div id="outputSkills" class="outputNormal">
+	<div><span>Small Guns</span><span></span></div>
+	<div><span>Big Guns</span><span></span></div>
+	<div><span>Energy Weap.</span><span></span></div>
+	<div><span>Close Combat</span><span></span></div>
+	<div><span>Scavenging</span><span></span></div>
+	<div><span>Throwing</span><span></span></div>
+	<div><span>First Aid</span><span></span></div>
+	<div><span>Doctor</span><span></span></div>
+	<div><span>Sneak</span><span></span></div>
+	<div><span>Lockpick</span><span></span></div>
+	<div><span>Steal</span><span></span></div>
+	<div><span>Traps</span><span></span></div>
+	<div><span>Science</span><span></span></div>
+	<div><span>Repair</span><span></span></div>
+	<div><span>Speech</span><span></span></div>
+	<div><span>Barter</span><span></span></div>
+	<div><span>Gambling</span><span></span></div>
+	<div><span>Outdoorsman</span><span></span></div>
+</div>
+<div id="outputPerks1" class="outputNormal"></div>
+<div id="outputPerks2" class="outputNormal"></div>
+<div id="outputTraits1" class="outputNormal">
+	<div id="fastMet"><span>Fast Metabolism</span></div>
+	<div id="bruiser"><span>Bruiser</span></div>
+	<div id="smallFrame"><span>Small Frame</span></div>
+	<div><span>One Hander</span></div>
+	<div id="finesse"><span>Finesse</span></div>
+	<div><span>Kamikaze</span></div>
+	<div id="heavyHanded"><span>Heavy Handed</span></div>
+	<div><span>Fast Shot</span></div>
+</div>
+<div id="outputTraits2" class="outputNormal">
+	<div><span>Bloody Mess</span></div>
+	<div><span>Jinxed</span></div>
+	<div id="goodNatured"><span>Good Natured</span></div>
+	<div><span>Chem Reliant</span></div>
+	<div><span>Chem Resistant</span></div>
+	<div id="bonehead"><span>Bonehead</span></div>
+	<div id="mutant"><span>Mutant</span></div>
+	<div id="evader"><span>Evader</span></div>
+</div>
+<div id="outputStats1" class="outputNormal">
+	<div><span>Planned Level</span><span><input id="plannedLevel" type="text" value="99" maxlength="2"></span></div>
+	<div><span>Skill Points</span><span id="outputSkillpoints"></span></div>
+    </br>
+<!--	<div><span>HP/Level Up</span><span id="hp_lvl_up">2</span></div>-->
+<!--	<div><span>SP/Level Up</span><span>15</span></div>-->
+	</br>
+
+</div>
+<div id="outputStats2" class="outputNormal">
+    <div><span>Hit Points</span><span id="health"></span></div>
+	<div><span>Healing Rate</span><span id="healRate"></span></div>
+    <div><span>Sight</span><span id="sight"></span></div>
+	<div><span>Carry Weight</span><span id="carryWeight"></span></div>
+	<div><span>Melee Damage</span><span id="meleeDamage"></span></div>
+	<!--<div><span>Damage Res.</span><span>0%</span></div>-->
+    <div><span>Armor Class</span><span id="armorClass"></span></div>
+	<div><span>Poison Res.</span><span id="poisonRes"></span></div>
+	<div><span>Radiation Res.</span><span id="radRes"></span></div>
+	<div><span>Critical Res.</span><span id="critRes"></span></div>
+    <div><span>Sequence</span><span id="sequence"></span></div>
+    <div><span>Action Points</span><span id="actionPoints"></span></div>
+	<div><span>Crit. Chance</span><span id="critChance"></span></div>
+</div>
+<div id="outputSpecialNum" class="outputBig">
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+</div>
+<div id="outputSpecialText" class="outputNormal">
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+	<div><span></span></div>
+</div>
+<div id="outputSkillpoints" class="outputBig"></div>
+<div id="outputInfo" class="outputNormal">
+ 	<div><span>Char Points</span><span id="outputCharpoints"></span></div>
+ 	<div><span>Tag Points</span><span id="outputTagpoints"></span></div>
+ 	<div><span>Trait Points</span><span id="outputTraitpoints"></span></div>
+</div>
+<div id="plusminusSlider">
+	<div id="plusSlider" class="plus"></div>
+	<div id="minusSlider" class="minus"></div>
+</div>
+<div id="plusminusSliderA">
+	<div id="plusSliderA" class="plus pickPerk"></div>
+	<div id="minusSliderA" class="minus"></div>
+</div>
+<div id="plusminusSliderB">
+	<div id="plusSliderB" class="plus pickPerk"></div>
+	<div id="minusSliderB" class="minus"></div>
+</div>
+<div id="titles" class="outputNormal">
+	<div id="level3">Level 3</div>
+	<div id="level6">Level 6</div>
+	<div id="level9">Level 9</div>
+	<div id="level12">Level 12</div>
+	<div id="level15">Level 15</div>
+	<div id="level18">Level 18</div>
+	<div id="booksTitle">Books</div>
+	<div id="questTitle">Quests</div>
+	<div id="implantsTitle">Implants</div>
+	<div id="takenPerksTitle">Taken Perks</div>
+</div>
+<div id="outputMiddleDown">
+</div>
+<div id="name">
+	<input id="name_input" type="text" value="Unnamed" maxlength="30"/>
+</div>
+
+<div id="books" class="outputNormal">
+	<div id="SGBook"><span>Small guns</span><span></span></div>
+	<div id="FABook"><span>First Aid</span><span></span></div>
+	<div id="RepairBook"><span>Repair</span><span></span></div>
+	<div id="ScienceBook"><span>Science</span><span></span></div>
+	<div id="ODMBook"><span>Outdoorsman</span><span></span></div>
+</div>
+<div id="quests" class="outputNormal">
+	<div id="repairQuest"><span>Repair +20%</span><span></span></div>
+	<div id="CritChanceQuest"><span>Critical Chance +3</span><span></span></div>
+	<div id="FoVQuest"><span>FoV +1 Hit Chance +5%</span><span></span></div>
+	<div id="HPQuest"><span>HP +10, +4 Heal. Rate</span><span></span></div>
+</div>
+<div id="implants" class="outputNormal">
+</div>
+
+</div></div>
+<div id="copyright">
+I'm buggy unfinished alpha! Help me reporting and suggesting at <a href=http://forum.fonline2.com/index.php?topic=6542.0>forum<a><br>
+Design concept by Niko Parviainen.<br>
+Developed by paragonid
+</div>
+</body></html>
